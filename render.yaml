@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: innexus-agent
+    env: docker
+    docker:
+      dockerfile: Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: innexus
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: suaSenhaForte123
+      - key: DB_TYPE
+        value: sqlite
